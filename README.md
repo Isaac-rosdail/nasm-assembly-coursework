@@ -1,10 +1,10 @@
-# nasm-assembly-coursework
+# Building/Linking (w/debugging info):
+  
+nasm -f elf32 -g -F dwarf file.asm && ld -m elf_i386 file.o -o file
 
-Build & Assemble (w/ debugging info):  
-nasm -f elf32 -g -F dwarf file.asm
+# Alternatively, using 'build' script:
 
-Link normally:  
-ld -m elf_i386 file.o -o file
+build file.asm  
 
 Run KDBG:  
 kdbg file
