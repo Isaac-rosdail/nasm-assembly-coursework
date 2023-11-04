@@ -1,0 +1,8 @@
+# Ignore all files without .asm extension (executables, etc.)
+*
+!*.gitignore
+!*.asm
+!*.txt
+!*.md
+!*.sh
+!*/
