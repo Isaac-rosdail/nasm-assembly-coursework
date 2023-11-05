@@ -13,7 +13,9 @@ section .data
 	        "Then the piper will lead us to reason", 0x0A, \
 	        "And a new day will dawn for those who stand", 0x20, 0x6c, 0x6f, 0x6e, 0x67, 10, \
 	        "And the forests will echo with laughter", ".", 0x0A
-	       
+	; We can force the assembler to figure out the number of bytes of data listed after the msg label
+    ; msgAlen is a symbol for a number, equ is a pseudo-command for NASM to define val of msgAlen ("equals")
+    ; $ denotes the address of the next byte of data / instruction in the program       
     msgAlen equ $ - msgA
     
     msgB db "Are we human, or are we dancer?", 0x0A
